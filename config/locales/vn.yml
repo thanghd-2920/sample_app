@@ -36,5 +36,23 @@ vn:
     logout: "Đăng xuất"
     setting: "Cài đặt"
     account: "Tài khoản"
+    update_success: "Cập nhật thông tin thành công"
+    log_in: "Hãy đăng nhập!"
+    confirm: "Bạn có chắc chắn muốn xóa user này?"
+    rememmber: "Ghi nhớ tài khoản trên thiết bị này"
+    delete_success: "Xóa người dùng thành công!"
+    delete_fail: "Xóa người dùng thất bại!"
+    delete: "Xóa"
+  mail:
+    active_acc: "Tài khoản đã được kích hoạt!"
+    error_link: "Link không hợp lệ!"
+    active_mess: "Hãy kiểm tra email của bạn để kích hoạt tài khoản!"
+    reset_sending: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu!"
+    not_found: "Không tìm thấy email!"
+    empty: "Mật khẩu không được trống!"
+    password_reset: "Mật khẩu đã được reset!"
+    password_expired: "Mật khẩu reset đã hết hạn!"
+    forgot_pass: "Quên mật khẩu"
+    submit_pass: "Cập nhật mật khẩu"
 
 
