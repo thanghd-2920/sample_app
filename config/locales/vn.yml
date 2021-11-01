@@ -1,0 +1,20 @@
+vn:
+  nav:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    login: "Đăng nhập"
+    title: "Tutorial về Rails tại Sample App"
+  home:
+    welcome: "Chào mừng đến với Sample App"
+    content_html: <h2>Đây là trang chủ của  <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample app.</h2>
+    signup: "Đăng ki ngay"
+  help:
+     body_html: Nhận giúp đỡ về Rails tutorial tại
+                <a href="http://www.railstutorial.org/help">Rails
+                Tutorial help
+                page</a>.
+                Để được giúp đỡ tại Sample app, xem thêm tại
+                <a href="http://www.railstutorial.org/book"><em>Ruby
+                on Rails
+                Tutorial</em> book</a>.
+
