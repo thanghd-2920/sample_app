@@ -7,7 +7,7 @@ en:
   home:
     welcome: "Welcome to the Sample App"
     content_html: <h2>This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application.</h2>
-    signup: "Signup now"
+    signup: "Signup"
   help:
     body_html: Get help on the Ruby on Rails Tutorial at the
                 <a href="http://www.railstutorial.org/help">Rails
@@ -17,3 +17,13 @@ en:
                 <a href="http://www.railstutorial.org/book"><em>Ruby
                 on Rails
                 Tutorial</em> book</a>.
+  new:
+    create_my_account: "Create account"
+    confirmation: "Confirm"
+    name: "name"
+    password: "password"
+    title: "Welcome to Sample app"
+    not_found: "Can't found user with id: %{id}"
+  error_signup:
+    the_form_contains: "The Form Contains"
+    error: "error"

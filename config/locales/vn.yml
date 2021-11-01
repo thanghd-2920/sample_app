@@ -7,7 +7,7 @@ vn:
   home:
     welcome: "Chào mừng đến với Sample App"
     content_html: <h2>Đây là trang chủ của  <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample app.</h2>
-    signup: "Đăng ki ngay"
+    signup: "Đăng kí"
   help:
      body_html: Nhận giúp đỡ về Rails tutorial tại
                 <a href="http://www.railstutorial.org/help">Rails
@@ -17,4 +17,16 @@ vn:
                 <a href="http://www.railstutorial.org/book"><em>Ruby
                 on Rails
                 Tutorial</em> book</a>.
+  new:
+    create_my_account: "Tạo tài khoản"
+    confirmation: "xác nhận lại mật khẩu"
+    name: "tên"
+    password: "mật khẩu"
+    title: "Chào mừng đến với Sample app"
+    not_found: "Không thể tìm thấy người dùng với id: %{id}"
+  error_signup:
+    the_form_contains: "Form đang có"
+    error: "lỗi"
+
+
 

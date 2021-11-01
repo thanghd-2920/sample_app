@@ -4,14 +4,12 @@ inverse">
   <%= link_to "sample app", "#", id: "logo" %>
   <nav class="bg-dark">
     <ul class="nav navbar-nav navbar-right bg-dark">
-
       <li><%= link_to_unless_current "English", locale:"en" %></li>
       <li><%= link_to_unless_current "Vietnamese", locale:"vn" %></li>
       <li><%= link_to t("nav.home"), home_path,class:"nav-link" %>
       </li>
       <li><%= link_to t("nav.help"), help_path,class:"nav-link" %>
       </li>
-      <li><%= link_to t("nav.login"), "#" %></li>
     </ul>
   </nav>
 </div>
