@@ -4,6 +4,7 @@ en:
     help: "Help"
     login: "Log in"
     title: "Ruby on Rails Tutorial Sample App"
+    user: "User"
   home:
     welcome: "Welcome to the Sample App"
     content_html: <h2>This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application.</h2>
@@ -24,6 +25,15 @@ en:
     password: "password"
     title: "Welcome to Sample app"
     not_found: "Can't found user with id: %{id}"
+    login_fail: "Your email or password invalid"
+    create_account_ques: "Don't have an account? "
+    signup_now: "Sign up now!"
   error_signup:
     the_form_contains: "The Form Contains"
     error: "error"
+  user:
+    profile: "Profile"
+    logout: "Logout"
+    setting: "Setting"
+    account: "Account"
+
