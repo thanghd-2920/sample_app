@@ -6,14 +6,12 @@ class User < ApplicationRecord
   format: {with: Settings.regex.email},
   uniqueness: true
   has_secure_password
-  validates :password_digest, presence: true, length: {minimum: Settings.atrr.lenght_6}
-
+  validates :password_digest, presence: true, length: {minimum: Settings.atrr.lenght_6}, allow_nil: true
   def downcase_email
-    self.email.downcase!
+    self.email = email.downcase
   end
-
   class << self
-    def digest(string)
+    def digest string
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
       BCrypt::Engine.cost
       BCrypt::Password.create(string, cost: cost)
@@ -29,7 +27,7 @@ class User < ApplicationRecord
     update_attribute :remember_digest, User.digest(remember_token)
   end
 
-  def authenticated?(remember_token)
+  def authenticated? remember_token
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 

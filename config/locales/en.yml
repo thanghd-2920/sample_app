@@ -5,6 +5,7 @@ en:
     login: "Log in"
     title: "Ruby on Rails Tutorial Sample App"
     user: "User"
+    users: "Users"
   home:
     welcome: "Welcome to the Sample App"
     content_html: <h2>This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application.</h2>
@@ -36,4 +37,16 @@ en:
     logout: "Logout"
     setting: "Setting"
     account: "Account"
+    update_success: "Updated profile success"
+    log_in: "Please log in!"
+    confirm: "Are you sure to delete this user"
+    rememmber: "Remember account on this device?"
+    delete_success: "Delete user successful!"
+    delete_fail: "Delete user fail!"
+    delete: "Delete"
+    not_permit: "Not permit!"
+    edit_user: "Edit user"
+    save_changes: "Save changes"
+    update_profile: "Update profile"
+
 
