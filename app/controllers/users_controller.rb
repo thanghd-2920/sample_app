@@ -1,10 +1,19 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy,:following, :followers]
+  before_action :correct_user, only: [:edit, :update]
+  def index
+    @users = User.all
+    @users = User.paginate(page:
+      params[:page])
+  end
+
   def new
-    @user = User.new
+    @user=User.new
   end
 
   def show
     @user = User.find_by id: params[:id]
+    @microposts = @user.microposts.paginate(page: params[:page])
     return if @user.present?
 
     flash[:danger] = t"new.not_found", id: params[:id]
@@ -14,12 +23,50 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t"new.title"
-      log_in @user
+      @user.send_activation_email
+      flash[:info] = t"mail.active_mess"
+      redirect_to root_url
+    else
+     render :new
+    end
+  end
+  def edit
+     @user=User.find_by id: params[:id]
+  end
+
+  def update
+    @user = User.find_by(id: params[:id])
+    if @user.update(user_params)
+      flash[:success] = t"user.update_success"
       redirect_to @user
     else
-      render :new
+      render 'edit'
     end
+  end
+  def destroy
+    user = User.find_by(id: params[:id])
+    if user&.destroy
+      flash[:success] = t"user.delete_success"
+    else
+      flash[:danger] = "user.delete_fail"
+    end
+    redirect_to users_url
+  end
+
+  def following
+    @title = "Following"
+    @user = User.find_by(id: params[:id])
+    @users = @user.following
+    .paginate(page: params[:page])
+    render "show_follow"
+  end
+
+  def followers
+    @title = "Followers"
+    @user = User.find_by(id: params[:id])
+    @users = @user.followers
+    .paginate(page: params[:page])
+    render "show_follow"
   end
 
   private
@@ -27,4 +74,21 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t"user.log_in"
+      redirect_to login_url
+    end
+  end
+  def correct_user
+    @user = User.find_by(id: params[:id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
+
+
 end
