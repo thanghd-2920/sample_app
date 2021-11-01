@@ -2,5 +2,6 @@ atrr:
   lenght_6: 6
   lenght_50: 50
   lenght_255: 255
+  lenght_140: 140
 regex:
   email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
