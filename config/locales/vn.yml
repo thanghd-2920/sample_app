@@ -4,6 +4,7 @@ vn:
     help: "Trợ giúp"
     login: "Đăng nhập"
     title: "Tutorial về Rails tại Sample App"
+    user: "Người dùng"
   home:
     welcome: "Chào mừng đến với Sample App"
     content_html: <h2>Đây là trang chủ của  <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample app.</h2>
@@ -24,9 +25,16 @@ vn:
     password: "mật khẩu"
     title: "Chào mừng đến với Sample app"
     not_found: "Không thể tìm thấy người dùng với id: %{id}"
+    login_fail: "Email hoặc mật khẩu của bạn không hợp lệ"
+    create_account_ques: "Chưa có tài khoản? "
+    signup_now: "Đăng kí ngay"
   error_signup:
     the_form_contains: "Form đang có"
     error: "lỗi"
-
+  user:
+    profile: "Hồ sơ"
+    logout: "Đăng xuất"
+    setting: "Cài đặt"
+    account: "Tài khoản"
 
 
